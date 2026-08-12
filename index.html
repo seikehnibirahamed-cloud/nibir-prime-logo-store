@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>NIBIR PRIME LOGO STORE</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050507;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00eaff;
+    filter:blur(180px);
+    opacity:.07;
+    top:-200px;
+    left:-200px;
+    pointer-events:none;
+}
+
+body:after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#7b00ff;
+    filter:blur(180px);
+    opacity:.06;
+    right:-200px;
+    bottom:-200px;
+    pointer-events:none;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,7,.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid #252535;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    font-size:18px;
+    font-weight:1000;
+    letter-spacing:.5px;
+}
+
+.brand span{
+    color:#00eaff;
+    text-shadow:0 0 15px #00eaff;
+}
+
+.home-btn{
+    border:1px solid #303044;
+    background:#11111a;
+    color:#fff;
+    padding:9px 14px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    max-width:1100px;
+    margin:auto;
+    padding:65px 20px 35px;
+    text-align:center;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+
+    background:#07191d;
+    border:1px solid #075866;
+
+    color:#00eaff;
+    font-size:10px;
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,9vw,72px);
+    line-height:1;
+    font-weight:1000;
+}
+
+.hero h1 span{
+    color:#00eaff;
+    text-shadow:
+    0 0 15px #00eaff,
+    0 0 40px #00eaff44;
+}
+
+.hero p{
+    max-width:650px;
+    margin:20px auto 0;
+
+    color:#777;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-area{
+    max-width:700px;
+    margin:0 auto 35px;
+    padding:0 20px;
+}
+
+.search{
+    width:100%;
+    padding:16px 18px;
+
+    background:#101018;
+    border:1px solid #29293b;
+
+    border-radius:15px;
+    outline:none;
+
+    color:#fff;
+    font-size:13px;
+}
+
+.search:focus{
+    border-color:#00eaff;
+    box-shadow:0 0 20px #00eaff20;
+}
+
+
+/* ================= CATEGORY SECTION ================= */
+
+.category-section{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 20px 70px;
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.heading h2{
+    font-size:23px;
+    font-weight:1000;
+}
+
+.heading span{
+    color:#555;
+    font-size:10px;
+}
+
+
+/* ================= CATEGORY GRID ================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+@media(min-width:650px){
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(min-width:950px){
+
+    .category-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+
+/* ================= CATEGORY CARD ================= */
+
+.category-card{
+
+    position:relative;
+
+    min-height:245px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #15151f,
+        #09090e
+    );
+
+    border:1px solid #29293b;
+    border-radius:22px;
+
+    padding:15px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.category-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:#00eaff;
+
+    filter:blur(80px);
+
+    opacity:.07;
+
+    top:-80px;
+}
+
+.category-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#00eaff;
+
+    box-shadow:
+    0 15px 40px #000,
+    0 0 30px #00eaff16;
+}
+
+
+/* IMAGE ON TOP */
+
+.category-image{
+
+    position:relative;
+
+    width:125px;
+    height:125px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#11111a;
+
+    border:1px solid #343448;
+
+    margin-bottom:17px;
+
+    box-shadow:
+    0 10px 30px #000;
+}
+
+.category-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.category-card:hover
+.category-image img{
+
+    transform:scale(1.08);
+}
+
+
+/* FALLBACK ICON */
+
+.fallback-icon{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:52px;
+}
+
+
+/* CATEGORY TEXT */
+
+.category-card h3{
+
+    position:relative;
+
+    font-size:14px;
+    font-weight:1000;
+
+    letter-spacing:.3px;
+}
+
+.category-card p{
+
+    position:relative;
+
+    color:#666;
+
+    font-size:9px;
+
+    margin-top:7px;
+
+    font-weight:bold;
+}
+
+
+/* ================= STORE ================= */
+
+.store{
+
+    display:none;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:30px 20px 70px;
+}
+
+.store.show{
+    display:block;
+}
+
+.back-btn{
+
+    padding:10px 15px;
+
+    background:#11111a;
+
+    border:1px solid #303044;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    margin-bottom:25px;
+}
+
+.store-header{
+
+    margin-bottom:25px;
+}
+
+.store-header h2{
+
+    font-size:30px;
+
+    font-weight:1000;
+}
+
+.store-header p{
+
+    color:#666;
+
+    font-size:12px;
+
+    margin-top:7px;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+}
+
+@media(min-width:650px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(min-width:950px){
+
+    .product-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card{
+
+    background:#101018;
+
+    border:1px solid #29293b;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.product-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#00eaff;
+
+    box-shadow:
+    0 15px 40px #000,
+    0 0 20px #00eaff15;
+}
+
+.product-image{
+
+    position:relative;
+
+    aspect-ratio:1/1;
+
+    background:#15151e;
+
+    overflow:hidden;
+}
+
+.product-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.product-card:hover
+.product-image img{
+
+    transform:scale(1.06);
+}
+
+
+/* WATERMARK */
+
+.watermark{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%)
+    rotate(-25deg);
+
+    width:100%;
+
+    text-align:center;
+
+    color:#ffffff45;
+
+    font-size:14px;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    white-space:nowrap;
+}
+
+
+/* PRICE */
+
+.price-tag{
+
+    position:absolute;
+
+    top:9px;
+    left:9px;
+
+    background:#00eaff;
+
+    color:#000;
+
+    padding:6px 9px;
+
+    border-radius:8px;
+
+    font-size:9px;
+
+    font-weight:1000;
+}
+
+
+/* PRODUCT INFO */
+
+.product-info{
+
+    padding:13px;
+}
+
+.product-info h3{
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+.product-info p{
+
+    color:#666;
+
+    font-size:10px;
+
+    margin-top:5px;
+}
+
+.product-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:11px;
+}
+
+.product-price{
+
+    color:#00eaff;
+
+    font-size:14px;
+
+    font-weight:1000;
+}
+
+.view-btn{
+
+    border:0;
+
+    background:#20202d;
+
+    color:#fff;
+
+    padding:7px 10px;
+
+    border-radius:8px;
+
+    font-size:9px;
+
+    font-weight:bold;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    background:#000d;
+
+    backdrop-filter:blur(12px);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:470px;
+
+    background:#0d0d15;
+
+    border:1px solid #303044;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 30px 100px #000;
+}
+
+.close{
+
+    position:absolute;
+
+    top:12px;
+    right:12px;
+
+    z-index:10;
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    border:1px solid #ffffff33;
+
+    background:#000b;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.modal-image{
+
+    position:relative;
+
+    aspect-ratio:1/1;
+}
+
+.modal-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.modal-watermark{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%)
+    rotate(-25deg);
+
+    width:100%;
+
+    text-align:center;
+
+    color:#ffffff55;
+
+    font-size:18px;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+
+    pointer-events:none;
+
+    white-space:nowrap;
+}
+
+.modal-content{
+
+    padding:20px;
+}
+
+.modal-content h2{
+
+    font-size:22px;
+}
+
+.modal-content p{
+
+    color:#666;
+
+    font-size:11px;
+
+    margin-top:6px;
+}
+
+.modal-price{
+
+    color:#00eaff;
+
+    font-size:24px;
+
+    font-weight:1000;
+
+    margin-top:15px;
+}
+
+.order-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:18px;
+
+    border:0;
+
+    border-radius:12px;
+
+    background:#16c866;
+
+    color:#000;
+
+    font-weight:1000;
+
+    cursor:pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    border-top:1px solid #20202d;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    color:#555;
+
+    font-size:11px;
+}
+
+footer strong{
+    color:#00eaff;
+}
+
+
+/* ================= TOAST ================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+    bottom:25px;
+
+    z-index:5000;
+
+    transform:
+    translate(-50%,100px);
+
+    opacity:0;
+
+    background:#15151f;
+
+    border:1px solid #333347;
+
+    padding:13px 18px;
+
+    border-radius:12px;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:
+    translate(-50%,0);
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="nav">
+
+    <div class="brand">
+
+        NIBIR
+        <span>PRIME LOGO STORE</span>
+
+    </div>
+
+    <button
+        class="home-btn"
+        onclick="goHome()"
+    >
+        HOME
+    </button>
+
+</div>
+
+</header>
+
+
+
+<!-- ================= HOME ================= -->
+
+<main id="homePage">
+
+
+<section class="hero">
+
+    <div class="hero-badge">
+        ⚡ PREMIUM DESIGN STORE
+    </div>
+
+    <h1>
+        NIBIR <span>PRIME</span>
+    </h1>
+
+    <p>
+        Gaming Logo • E Sports Logo • TikTok Logo
+        • YouTuber Logo • Jersey Design
+        • Facebook Logo
+    </p>
+
+</section>
+
+
+
+<!-- SEARCH -->
+
+<div class="search-area">
+
+    <input
+        id="search"
+        class="search"
+        type="text"
+        placeholder="🔎 Search category..."
+    >
+
+</div>
+
+
+
+<!-- CATEGORY -->
+
+<section class="category-section">
+
+<div class="heading">
+
+    <h2>🔥 DESIGN COLLECTION</h2>
+
+    <span>SELECT CATEGORY</span>
+
+</div>
+
+
+<div
+    class="category-grid"
+    id="categoryGrid"
+>
+
+
+<!-- JERSEY -->
+
+<div
+    class="category-card"
+    data-search="jersey design"
+    onclick="openCategory('JERSEY DESIGN')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/jersey.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            👕
+        </div>
+
+    </div>
+
+    <h3>
+        JERSEY DESIGN
+    </h3>
+
+    <p>
+        VIEW DESIGNS →
+    </p>
+
+</div>
+
+
+
+<!-- GAMING -->
+
+<div
+    class="category-card"
+    data-search="gaming logo"
+    onclick="openCategory('GAMING LOGO')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/gaming.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            🎮
+        </div>
+
+    </div>
+
+    <h3>
+        GAMING LOGO
+    </h3>
+
+    <p>
+        VIEW LOGOS →
+    </p>
+
+</div>
+
+
+
+<!-- TIKTOK -->
+
+<div
+    class="category-card"
+    data-search="tiktok logo"
+    onclick="openCategory('TIKTOK LOGO')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/tiktok.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            🎵
+        </div>
+
+    </div>
+
+    <h3>
+        TIKTOK LOGO
+    </h3>
+
+    <p>
+        VIEW LOGOS →
+    </p>
+
+</div>
+
+
+
+<!-- ESPORTS -->
+
+<div
+    class="category-card"
+    data-search="e sports logo esports"
+    onclick="openCategory('E SPORTS LOGO')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/esports.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            🏆
+        </div>
+
+    </div>
+
+    <h3>
+        E SPORTS LOGO
+    </h3>
+
+    <p>
+        VIEW LOGOS →
+    </p>
+
+</div>
+
+
+
+<!-- YOUTUBE -->
+
+<div
+    class="category-card"
+    data-search="youtuber youtube logo"
+    onclick="openCategory('YOUTUBER LOGO')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/youtube.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            ▶️
+        </div>
+
+    </div>
+
+    <h3>
+        YOUTUBER LOGO
+    </h3>
+
+    <p>
+        VIEW LOGOS →
+    </p>
+
+</div>
+
+
+
+<!-- FACEBOOK -->
+
+<div
+    class="category-card"
+    data-search="facebook logo"
+    onclick="openCategory('FACEBOOK LOGO')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/facebook.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            📘
+        </div>
+
+    </div>
+
+    <h3>
+        FACEBOOK LOGO
+    </h3>
+
+    <p>
+        VIEW LOGOS →
+    </p>
+
+</div>
+
+
+
+<!-- OTHERS -->
+
+<div
+    class="category-card"
+    data-search="others"
+    onclick="openCategory('OTHERS')"
+>
+
+    <div class="category-image">
+
+        <img
+            src="assets/others.jpg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        >
+
+        <div
+            class="fallback-icon"
+            style="display:none"
+        >
+            ✨
+        </div>
+
+    </div>
+
+    <h3>
+        OTHERS
+    </h3>
+
+    <p>
+        VIEW DESIGNS →
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- ================= STORE PAGE ================= -->
+
+<section
+    class="store"
+    id="storePage"
+>
+
+    <button
+        class="back-btn"
+        onclick="goHome()"
+    >
+        ← BACK
+    </button>
+
+
+    <div class="store-header">
+
+        <h2 id="storeTitle">
+            GAMING LOGO
+        </h2>
+
+        <p>
+            Select a design to preview and order.
+        </p>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid"
+    ></div>
+
+</section>
+
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+    class="modal"
+    id="modal"
+>
+
+<div class="modal-box">
+
+
+<button
+    class="close"
+    onclick="closeModal()"
+>
+    ×
+</button>
+
+
+<div class="modal-image">
+
+    <img
+        id="modalImage"
+        src=""
+    >
+
+    <div class="modal-watermark">
+        NIBIR PRIME • PREVIEW
+    </div>
+
+</div>
+
+
+<div class="modal-content">
+
+    <h2
+        id="modalName"
+    >
+        Design
+    </h2>
+
+    <p
+        id="modalCategory"
+    >
+        Category
+    </p>
+
+    <div
+        class="modal-price"
+        id="modalPrice"
+    >
+        ৳5
+    </div>
+
+
+    <button
+        class="order-btn"
+        onclick="orderWhatsApp()"
+    >
+        💬 ORDER ON WHATSAPP
+    </button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div
+    class="toast"
+    id="toast"
+>
+</div>
+
+
+
+<footer>
+
+    <strong>
+        NIBIR PRIME LOGO STORE
+    </strong>
+
+    <br><br>
+
+    Gaming • Esports • TikTok • YouTube
+    • Facebook • Jersey
+
+    <br><br>
+
+    WhatsApp:
+    01642268349
+
+    <br><br>
+
+    © 2026 NIBIR PRIME LOGO STORE
+
+</footer>
+
+
+
+<script>
+
+
+/* ==========================================
+   LOGO / DESIGN DATABASE
+==========================================
+
+   এখানে তোমার নিজের design যোগ করবে।
+
+   NORMAL = ৳5
+   PREMIUM = ৳10
+
+========================================== */
+
+
+const products = [
+
+
+/* ================= JERSEY DESIGN ================= */
+
+{
+    category:"JERSEY DESIGN",
+    name:"Black Noir Jersey",
+    type:"Premium Jersey",
+    price:"৳10",
+    image:"assets/jersey1.jpg"
+},
+
+{
+    category:"JERSEY DESIGN",
+    name:"E Sports Jersey",
+    type:"Normal Jersey",
+    price:"৳5",
+    image:"assets/jersey2.jpg"
+},
+
+{
+    category:"JERSEY DESIGN",
+    name:"Pro Gaming Jersey",
+    type:"Premium Jersey",
+    price:"৳10",
+    image:"assets/jersey3.jpg"
+},
+
+{
+    category:"JERSEY DESIGN",
+    name:"Red Fire Jersey",
+    type:"Normal Jersey",
+    price:"৳5",
+    image:"assets/jersey4.jpg"
+},
+
+
+/* ================= GAMING LOGO ================= */
+
+{
+    category:"GAMING LOGO",
+    name:"Gaming Logo 01",
+    type:"Premium Gaming",
+    price:"৳10",
+    image:"assets/gaming1.jpg"
+},
+
+{
+    category:"GAMING LOGO",
+    name:"Gaming Logo 02",
+    type:"Normal Gaming",
+    price:"৳5",
+    image:"assets/gaming2.jpg"
+},
+
+{
+    category:"GAMING LOGO",
+    name:"Fire Dragon",
+    type:"Premium Gaming",
+    price:"৳10",
+    image:"assets/gaming3.jpg"
+},
+
+{
+    category:"GAMING LOGO",
+    name:"Shadow Gaming",
+    type:"Normal Gaming",
+    price:"৳5",
+    image:"assets/gaming4.jpg"
+},
+
+
+/* ================= TIKTOK ================= */
+
+{
+    category:"TIKTOK LOGO",
+    name:"TikTok Logo 01",
+    type:"Premium TikTok",
+    price:"৳10",
+    image:"assets/tiktok1.jpg"
+},
+
+{
+    category:"TIKTOK LOGO",
+    name:"TikTok Logo 02",
+    type:"Normal TikTok",
+    price:"৳5",
+    image:"assets/tiktok2.jpg"
+},
+
+{
+    category:"TIKTOK LOGO",
+    name:"TikTok King",
+    type:"Premium TikTok",
+    price:"৳10",
+    image:"assets/tiktok3.jpg"
+},
+
+
+/* ================= E SPORTS ================= */
+
+{
+    category:"E SPORTS LOGO",
+    name:"E Sports Logo 01",
+    type:"Premium E Sports",
+    price:"৳10",
+    image:"assets/esports1.jpg"
+},
+
+{
+    category:"E SPORTS LOGO",
+    name:"E Sports Logo 02",
+    type:"Normal E Sports",
+    price:"৳5",
+    image:"assets/esports2.jpg"
+},
+
+{
+    category:"E SPORTS LOGO",
+    name:"Elite Squad",
+    type:"Premium E Sports",
+    price:"৳10",
+    image:"assets/esports3.jpg"
+},
+
+{
+    category:"E SPORTS LOGO",
+    name:"Pro Team",
+    type:"Normal E Sports",
+    price:"৳5",
+    image:"assets/esports4.jpg"
+},
+
+
+/* ================= YOUTUBER ================= */
+
+{
+    category:"YOUTUBER LOGO",
+    name:"YouTuber Logo 01",
+    type:"Premium YouTuber",
+    price:"৳10",
+    image:"assets/youtube1.jpg"
+},
+
+{
+    category:"YOUTUBER LOGO",
+    name:"YouTuber Logo 02",
+    type:"Normal YouTuber",
+    price:"৳5",
+    image:"assets/youtube2.jpg"
+},
+
+{
+    category:"YOUTUBER LOGO",
+    name:"Gaming YouTuber",
+    type:"Premium YouTuber",
+    price:"৳10",
+    image:"assets/youtube3.jpg"
+},
+
+
+/* ================= FACEBOOK ================= */
+
+{
+    category:"FACEBOOK LOGO",
+    name:"Facebook Logo 01",
+    type:"Premium Facebook",
+    price:"৳10",
+    image:"assets/facebook1.jpg"
+},
+
+{
+    category:"FACEBOOK LOGO",
+    name:"Facebook Logo 02",
+    type:"Normal Facebook",
+    price:"৳5",
+    image:"assets/facebook2.jpg"
+},
+
+{
+    category:"FACEBOOK LOGO",
+    name:"Facebook Gaming",
+    type:"Premium Facebook",
+    price:"৳10",
+    image:"assets/facebook3.jpg"
+},
+
+
+/* ================= OTHERS ================= */
+
+{
+    category:"OTHERS",
+    name:"Other Design 01",
+    type:"Premium",
+    price:"৳10",
+    image:"assets/other1.jpg"
+},
+
+{
+    category:"OTHERS",
+    name:"Other Design 02",
+    type:"Normal",
+    price:"৳5",
+    image:"assets/other2.jpg"
+},
+
+{
+    category:"OTHERS",
+    name:"Other Design 03",
+    type:"Premium",
+    price:"৳10",
+    image:"assets/other3.jpg"
+}
+
+];
+
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+let currentCategory="";
+let selectedProduct=null;
+
+
+
+/* ==========================================
+   OPEN CATEGORY
+========================================== */
+
+function openCategory(category){
+
+    currentCategory=category;
+
+    document
+    .getElementById("homePage")
+    .style.display="none";
+
+
+    document
+    .getElementById("storePage")
+    .classList.add("show");
+
+
+    document
+    .getElementById("storeTitle")
+    .innerText=category;
+
+
+    displayProducts();
+
+    window.scrollTo(0,0);
+
+}
+
+
+
+/* ==========================================
+   DISPLAY PRODUCTS
+========================================== */
+
+function displayProducts(){
+
+    const grid=
+    document.getElementById(
+        "productGrid"
+    );
+
+
+    grid.innerHTML="";
+
+
+    const list=
+    products.filter(
+        item =>
+        item.category===
+        currentCategory
+    );
+
+
+    list.forEach(
+        item=>{
+
+            const card=
+            document.createElement(
+                "div"
+            );
+
+
+            card.className=
+            "product-card";
+
+
+            card.innerHTML=`
+
+            <div class="product-image">
+
+                <img
+                    src="${item.image}"
+                    onerror="this.style.opacity='.08'"
+                >
+
+                <div class="price-tag">
+                    ${item.price}
+                </div>
+
+                <div class="watermark">
+                    NIBIR PRIME
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    ${item.name}
+                </h3>
+
+                <p>
+                    ${item.type}
+                </p>
+
+                <div class="product-bottom">
+
+                    <div class="product-price">
+                        ${item.price}
+                    </div>
+
+                    <button class="view-btn">
+                        VIEW
+                    </button>
+
+                </div>
+
+            </div>
+
+            `;
+
+
+            card.onclick=
+            function(){
+
+                openModal(item);
+
+            };
+
+
+            grid.appendChild(card);
+
+        }
+    );
+
+
+    if(list.length===0){
+
+        grid.innerHTML=`
+
+        <div style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:60px 20px;
+            color:#666;
+        ">
+
+        😔 No design added yet.
+
+        <br><br>
+
+        Add your images to the
+        <b style="color:#00eaff">
+        assets
+        </b>
+        folder.
+
+        </div>
+
+        `;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   HOME
+========================================== */
+
+function goHome(){
+
+    document
+    .getElementById("storePage")
+    .classList.remove("show");
+
+
+    document
+    .getElementById("homePage")
+    .style.display="block";
+
+
+    window.scrollTo(0,0);
+
+}
+
+
+
+/* ==========================================
+   SEARCH CATEGORY
+========================================== */
+
+document
+.getElementById("search")
+.addEventListener(
+    "input",
+    function(){
+
+        const value=
+        this.value
+        .toLowerCase()
+        .trim();
+
+
+        document
+        .querySelectorAll(
+            ".category-card"
+        )
+        .forEach(
+            card=>{
+
+                const text=
+                card
+                .dataset
+                .search;
+
+
+                if(
+                    text.includes(value)
+                ){
+
+                    card.style.display=
+                    "flex";
+
+                }else{
+
+                    card.style.display=
+                    "none";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* ==========================================
+   OPEN MODAL
+========================================== */
+
+function openModal(item){
+
+    selectedProduct=item;
+
+
+    document
+    .getElementById(
+        "modalImage"
+    )
+    .src=item.image;
+
+
+    document
+    .getElementById(
+        "modalName"
+    )
+    .innerText=item.name;
+
+
+    document
+    .getElementById(
+        "modalCategory"
+    )
+    .innerText=
+    item.category+
+    " • "+
+    item.type;
+
+
+    document
+    .getElementById(
+        "modalPrice"
+    )
+    .innerText=item.price;
+
+
+    document
+    .getElementById(
+        "modal"
+    )
+    .classList.add("show");
+
+
+    document.body.style.overflow=
+    "hidden";
+
+}
+
+
+
+/* ==========================================
+   CLOSE MODAL
+========================================== */
+
+function closeModal(){
+
+    document
+    .getElementById(
+        "modal"
+    )
+    .classList.remove("show");
+
+
+    document.body.style.overflow=
+    "auto";
+
+}
+
+
+
+/* ==========================================
+   WHATSAPP ORDER
+========================================== */
+
+function orderWhatsApp(){
+
+    if(!selectedProduct){
+
+        return;
+
+    }
+
+
+    const number=
+    "8801642268349";
+
+
+    const message=
+    "Hello NIBIR PRIME LOGO STORE,%0A%0A"+
+    "I want to order this design.%0A%0A"+
+    "Category: "+
+    encodeURIComponent(
+        selectedProduct.category
+    )+
+    "%0ADesign: "+
+    encodeURIComponent(
+        selectedProduct.name
+    )+
+    "%0AType: "+
+    encodeURIComponent(
+        selectedProduct.type
+    )+
+    "%0APrice: "+
+    encodeURIComponent(
+        selectedProduct.price
+    );
+
+
+    window.open(
+        "https://wa.me/"+
+        number+
+        "?text="+
+        message,
+        "_blank"
+    );
+
+}
+
+
+
+/* ==========================================
+   MODAL OUTSIDE CLICK
+========================================== */
+
+document
+.getElementById("modal")
+.addEventListener(
+    "click",
+    function(e){
+
+        if(
+            e.target===
+            this
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
+   ESC CLOSE
+========================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key==="Escape"){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
+   BASIC IMAGE PROTECTION
+========================================== */
+
+document.addEventListener(
+    "contextmenu",
+    function(e){
+
+        e.preventDefault();
+
+        showToast(
+            "Preview protected 🔒"
+        );
+
+    }
+);
+
+
+document.addEventListener(
+    "dragstart",
+    function(e){
+
+        if(
+            e.target.tagName===
+            "IMG"
+        ){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
+   TOAST
+========================================== */
+
+let toastTimer;
+
+function showToast(text){
+
+    const toast=
+    document.getElementById(
+        "toast"
+    );
+
+
+    toast.innerText=text;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer=
+    setTimeout(
+        function(){
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        2200
+    );
+
+}
+
+</script>
+
+</body>
+  </html>
